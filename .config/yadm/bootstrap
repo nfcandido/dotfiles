@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+
+# Because Git submodule commands cannot operate without a work tree, they must
+# be run from within $HOME (assuming this is the root of your dotfiles)
+cd "$HOME"
+
+# In what OS are we?
+case $OSTYPE in
+  darwin*)
+    CONFIG_FILE=.bash_profile
+    ;;
+  *)
+    CONFIG_FILE=.bashrc
+    ;;
+esac
+
+echo "Init submodules"
+yadm submodule update --recursive --init
+
+# Initialize submodules
+
+# bash_it
+if [ -f ~/.config/yadm/deps/bash_it/install.sh ]; then
+
+  # Path to the bash it configuration
+  export BASH_IT="$HOME/.config/yadm/deps/bash_it"
+
+  echo "Installing Bash-it..."
+  $BASH_IT/install.sh --silent --no-modify-config
+
+  # Load Bash It
+  echo "Loading bash-it... from $BASH_IT"
+  source "$BASH_IT/bash_it.sh"
+ 
+  echo "Enabling bash-it plugins"
+  bash-it enable plugin man extract sudo
+
+  echo "Enabling bash-it  aliases"
+  bash-it enable alias apt clipboard curl
+
+  echo "Enabling bash-it completions"
+  bash-it enable completion ssh 
+
+  echo "Reloading bash-it"
+  bash-it reload
+fi
+
+
