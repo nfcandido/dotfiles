@@ -45,4 +45,12 @@ if [ -f ~/.config/yadm/deps/bash_it/install.sh ]; then
   bash-it reload
 fi
 
+#### Desktop customizations ######
+
+#### Guake ####
+if [ -x $(which guake) ]; then
+  if [ -e "$HOME/.config/yadm/data/guake.ini"
+    cat $HOME/.config/yadm/data/guake.ini | dconf load /apps/guake/
+  fi
+fi
 
