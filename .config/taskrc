@@ -29,3 +29,11 @@ data.location=~/.task
 #include /usr/share/taskwarrior/solarized-light-256.theme
 #include /usr/share/taskwarrior/no-color.theme
 
+# Reports
+#
+# in report - list task in inbox
+report.in.columns = id,entry.age,description
+report.in.description = Inbox
+report.in.filter = status:pending limit:page (+in)
+report.in.labels = ID,Age,Description
+
