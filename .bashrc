@@ -12,6 +12,10 @@ export TASKRC="$HOME/.config/taskrc"
 # Path to the bash it configuration
 export BASH_IT="/home/ncandido/.config/yadm/deps/bash_it"
 
+# Path to bash_it custom scripts directory
+# Any *.bash file under every directory bellow this folder will be used
+export BASH_IT_CUSTOM="$HOME/.config/bash_it/enabled"
+
 # Lock and Load a custom theme file.
 # Leave empty to disable theming.
 # location /.bash_it/themes/
