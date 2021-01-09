@@ -6,6 +6,9 @@ case $- in
     *) return;;
 esac
 
+# Path to the taskwarrior configuration file
+export TASKRC="$HOME/.config/taskrc"
+
 # Path to the bash it configuration
 export BASH_IT="/home/ncandido/.config/yadm/deps/bash_it"
 
