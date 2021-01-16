@@ -31,9 +31,9 @@ data.location=~/.task
 
 # Reports
 #
-# in report - list task in inbox
-report.in.columns = id,entry.age,description
-report.in.description = Inbox
-report.in.filter = status:pending limit:page (+in)
-report.in.labels = ID,Age,Description
+# tin report - list task in inbox
+report.tin.columns = id,entry.age,description
+report.tin.description = Inbox
+report.tin.filter = status:pending limit:page (+in)
+report.tin.labels = ID,Age,Description
 

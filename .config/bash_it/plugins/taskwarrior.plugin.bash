@@ -9,6 +9,6 @@ tickle () {
 
   desdline=$1
   shift
-  in +tickle wait:$deadline $@
+  task tin +tickle wait:$deadline $@
 }
 
