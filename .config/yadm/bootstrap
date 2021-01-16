@@ -20,7 +20,7 @@ yadm submodule update --recursive --init
 # Initialize submodules
 
 # bash_it
-if [ -f ~/.config/yadm/deps/bash_it/install.sh ]; then
+if [[ -f ~/.config/yadm/deps/bash_it/install.sh ]]; then
 
   # Path to the bash it configuration
   export BASH_IT="$HOME/.config/yadm/deps/bash_it"
@@ -48,8 +48,8 @@ fi
 #### Desktop customizations ######
 
 #### Guake ####
-if [ -x $(which guake) ]; then
-  if [ -e "$HOME/.config/yadm/data/guake.ini"
+if [[ -x $(which guake) ]]; then
+  if [[ -e "$HOME/.config/yadm/data/guake.ini"]]; then
     cat $HOME/.config/yadm/data/guake.ini | dconf load /apps/guake/
   fi
 fi
