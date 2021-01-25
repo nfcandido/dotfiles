@@ -36,7 +36,7 @@ if [[ -f ~/.config/yadm/deps/bash_it/install.sh ]]; then
   source "$BASH_IT/bash_it.sh"
  
   echo "Enabling bash-it plugins"
-  bash-it enable plugin man extract sudo
+  bash-it enable plugin man extract sudo sshagent ssh
 
   echo "Enabling bash-it  aliases"
   bash-it enable alias apt clipboard curl
