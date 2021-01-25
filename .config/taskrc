@@ -47,3 +47,4 @@ taskd.server=inthe.am:53589
 taskd.credentials=inthe_am/nuno.candido/9d20dc61-1c0e-4679-b811-178609691776
 taskd.trust=ignore hostname
 context.Work=+wrk
+context=Work
